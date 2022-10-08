@@ -19,3 +19,17 @@ remainder7 =int(input(">"))
 age = (remainder3 * 70 + remainder5 * 21 + remainder7 * 15) % 105
 your_age = (f"Your age is, {age} that`s a good time to start programming!")
 print(your_age)
+
+proving_that_bot_can_count = ("Now i will prove to you that I can count any number you want.")
+completed_counting = ("Completed, have a nice day!")
+print(proving_that_bot_can_count)
+countinput = (int(input(">")))
+count = 0
+while count < countinput:
+    count = count + 1
+    print(f"{count}!")
+
+print(completed_counting)
+
+
+
