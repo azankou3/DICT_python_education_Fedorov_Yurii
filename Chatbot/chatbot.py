@@ -23,6 +23,7 @@ print(your_age)
 proving_that_bot_can_count = ("Now i will prove to you that I can count any number you want.")
 completed_counting = ("Completed, have a nice day!")
 print(proving_that_bot_can_count)
+
 countinput = (int(input(">")))
 count = 0
 while count < countinput:
@@ -31,5 +32,26 @@ while count < countinput:
 
 print(completed_counting)
 
+test_time = ("Let`s test your programming knowledge. \nAmount of bit is equeal to byte")
+print(test_time)
 
+test_answers = ("1. 4-bit is one byte?\n"
+                "2. 6-bit is one byte?\n"
+                "3. 8-bit is one byte?\n"
+                "4, 10-bit is one byte?")
 
+print(test_answers)
+
+congratulation = ("Completed, have nice day")
+player_answer = ("write number for answer:")
+print(player_answer)
+while True:
+    k = int(input(">"))
+    if k ==3:
+        print(congratulation)
+        break
+    else:
+        print("Please, try again")
+
+Congrgatulations_on_bots_end = ("Congratulations, have a nice day!")
+print(Congrgatulations_on_bots_end)
