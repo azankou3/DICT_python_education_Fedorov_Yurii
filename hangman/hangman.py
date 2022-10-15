@@ -3,21 +3,21 @@ import random
 greetings = ("HANGMAN \nThe game will be avalible soon.")
 print(greetings)
 
-HANGMAN = [0, 1, 2, 3, 4]
+HANGMAN = [0, 1, 2, 3, 4, 5, 6, 7,]
 
 max_wrong = len(HANGMAN)
-words = ["python", "java", "php", "javascript"]
+words = ["python", "java", "php", "javascript", "ruby", "c++", "c", "html"]
 
 word = random.choice(words)
 
-print(f"You`re max wrong is {max_wrong}")
+print(f"You`re max mistake is {max_wrong}")
 
 word_apperance = '_' * len(word)
 wrong = 0
 used = []
 
 while wrong < max_wrong and word_apperance != word:
-    print(HANGMAN[wrong])
+    print("youre mistake",HANGMAN[wrong])
     print('\nUsed letter:', used)
     print('\nword looks like\n', word_apperance)
 
