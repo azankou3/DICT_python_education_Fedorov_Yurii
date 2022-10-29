@@ -88,7 +88,7 @@ def isFull(board, symbol_1, symbol_2):
         winner = isWinner(board, symbol_1, symbol_2, count)
         count += 1
     if winner == False:
-        print("Game over.")
+        print("\nGame over.\n")
 
 
     report(count, winner, symbol_1, symbol_2)
@@ -96,7 +96,7 @@ def isFull(board, symbol_1, symbol_2):
 
 def outOfBoard(row, column):
 
-    print("Out of boarder. Pick another one. ")
+    print("\nOut of boarder. Pick another one.\n")
 
 
 def printPretty(board):
@@ -153,7 +153,7 @@ def isWinner(board, symbol_1, symbol_2, count):
 
 
 def illegal(board, symbol_1, symbol_2, row, column):
-    print("The square you picked is already filled. Pick another one.")
+    print("\nThe square you picked is already filled.\nPick another one.\n")
 
 
 def report(count, winner, symbol_1, symbol_2):
@@ -163,7 +163,7 @@ def report(count, winner, symbol_1, symbol_2):
     elif (winner == False) and (count % 2 == 0):
         print(f"Winner : Player {symbol_2}.")
     else:
-        print("There is a tie. ")
+        print("\nThere is a tie. ")
 
 
 main()
