@@ -7,7 +7,7 @@ def main():
 
 
 def intro():
-    print("Hello! Welcome to Pam's Tic Tac Toe game!\n")
+    print("Hello!\nWelcome to Tic Tac Toe game!\n")
     print("Rules: Player 1 and player 2, represented by X and O, take turns\n"
           "marking the spaces in a 3*3 grid. The player who succeeds in placing\n"
           "three of their marks in a horizontal, vertical, or diagonal row wins.")
@@ -15,7 +15,7 @@ def intro():
 
 
 def create_grid():
-    print("Here is the playboard:")
+    print("Here is the playboard:\n")
     board = [[" ", " ", " "],
              [" ", " ", " "],
              [" ", " ", " "]]
