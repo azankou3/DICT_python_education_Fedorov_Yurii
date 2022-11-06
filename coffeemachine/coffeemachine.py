@@ -1,5 +1,6 @@
 class Coffee:
 
+
     def __init__(self, name, water, milk, coffee_beans, cups, price):
         self.name = name
         self.water = water
@@ -11,6 +12,7 @@ class Coffee:
 
 class Machine_resources:
 
+
     def __init__(self, water, milk, coffee_beans, cups, money):
         self.water = water
         self.milk = milk
@@ -19,38 +21,53 @@ class Machine_resources:
         self.money = money
 
 
-machine = Machine_resources(1000, 600, 1000, 60, 100)
+machine = Machine_resources(10000, 6000, 1000, 60, 100)
 espresso = Coffee('espresso', 250, 0, 16, 1, 4)
 latte = Coffee('latte', 350, 75, 20, 1, 7)
 cappuccino = Coffee('cappuccino', 200, 100, 12, 1, 6)
 
-print(machine.water)
-
 
 def greeting():
     print("Welcome to coffee machine")
+
     print(f'We have\n'
           f'espresso for {espresso.price}-GRN\n'
           f'latte for {latte.price}-GRN\n'
           f'cappuccino for {cappuccino.price}-GRN')
+
+
     print('Enter\n1 for espresso\n2 for latte\n3 for cappuccino')
     buyer_input = int(input(">"))
-    if buyer_input == 1:
+    if int(buyer_input) == 1:
         print('Enter ammount of cups')
-        cups_of_coffee_input = int(input('>'))
-        if cups_of_coffee_input > machine.cups:
+
+        coi = cups_of_coffee_input = int(input('>'))
+
+        if int(coi) > int(machine.cups):
             print('Sorry dont enough cups for this')
-        calculated_resources_water = cups_of_coffee_input * espresso.water
-        calculated_resources_milk = cups_of_coffee_input * espresso.milk
-        calculated_resources_beans = cups_of_coffee_input * espresso.coffee_beans
-        if int(calculated_resources_water) <= int(espresso.water) and int(calculated_resources_beans) <= int(espresso.coffee_beans) and int(calculated_resources_milk) <= int(espresso.milk):
-            print("Starting to make a coffee\n"
-            "Grinding coffee beans\n"
-            "Boiling water\n"
-            "Mixing boiled water with crushed coffee beans\n"
-            "Pouring coffee into the cup\n"
-            "Pouring some milk into the cup\n"
-            "Coffee is ready!")
+        else:
+            crw = calculated_resources_water = cups_of_coffee_input * espresso.water
+            crm = calculated_resources_milk = cups_of_coffee_input * espresso.milk
+            crb = calculated_resources_beans = cups_of_coffee_input * espresso.coffee_beans
+
+            es = machine.water
+            em = machine.milk
+            eb = machine.coffee_beans
+
+            x = es / crw
+            # y = em / crm
+            z = eb / crb
+            cups = min(x, z) - cups_of_coffee_input
+            print(f'Yes, I can make that amount of coffee (and even {cups} more than that)”,')
+            if int(crw) < int(es) or int(crb) < int(eb) or int(crm) < int(em) or int(coi) < int(machine.cups):
+                coffee_making = (f"Starting to make a coffee\nGrinding coffee beans\nBoiling water\n"
+                             f"Mixing boiled water with crushed coffee beans\nPouring coffee into the cup\n"
+                             f"Pouring some milk into the cup\nYour {coi} cup of coffee is ready!")
+                machine.money = int(espresso.price) * int(coi)
+                # maxc = max_cups_of_coffee =
+                print(coffee_making)
+
+
 
 
 
