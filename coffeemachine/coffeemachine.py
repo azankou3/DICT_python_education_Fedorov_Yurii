@@ -19,7 +19,7 @@ class Machine_resources:
         self.money = money
 
 
-machine = Machine_resources(1000, 200, 500, 60, 100)
+machine = Machine_resources(10000, 2000, 500, 60, 100)
 espresso = Coffee('espresso', 250, 0, 16, 1, 4)
 latte = Coffee('latte', 350, 75, 20, 1, 7)
 cappuccino = Coffee('cappuccino', 200, 100, 12, 1, 6)
