@@ -8,40 +8,45 @@ class Markdown:
         with open('output.md', 'a') as text_write:
             text_input = input('>')
             text_write.write(f'\n\n{text_input}')
-            Markdown.menu(Markdown)
+
 
     def new_line(self):
         with open('output.md', 'a') as text_new_line:
             text_new_line.write('\n')
-            Markdown.menu(Markdown)
+
 
     def italic_line(self):
         with open('output.md', 'a') as text_write:
             italic_text = input('>')
             text_write.write(f'\n\n*{italic_text}*')
-            Markdown.menu(Markdown)
+
 
     def bold_line(self):
         with open('output.md', 'a') as text_write:
             bold_text = input('>')
             text_write.write(f'\n\n**{bold_text}**')
-            Markdown.menu(Markdown)
+
 
     def bold_and_italic_line(self):
         with open('output.md', 'a') as text_write:
             bold_and_italic_text = input('>')
             text_write.write(f'\n\n***{bold_and_italic_text}***')
-            Markdown.menu(Markdown)
+
 
     def header_line(self):
         print('Hello please enter level of Header in range 1 to 6')
         header_level_input = int(input('>'))
+        print(header_level_input)
         if header_level_input >= 1 and header_level_input <= 6:
+            print('1')
             header_level = ('#' * header_level_input)
+            print(header_level)
             with open('output.md', 'a') as text_write:
                 italic_text = input('>')
+                print(italic_text)
                 text_write.write(f'\n{header_level} {italic_text}\n')
-                Markdown.menu(Markdown)
+
+
         else:
             print("Out of range")
             Markdown.header_line(Markdown)
@@ -50,14 +55,14 @@ class Markdown:
         with open('output.md', 'a') as text_write:
             link_name = input('Link name:>')
             link = input('link:>')
-            text_write.write(f'\n[{link_name}]({link})')
-            Markdown.menu(Markdown)
+            text_write.write(f'\n\n[{link_name}]({link})')
+
 
     def code_line(self):
         with open('output.md', 'a') as text_write:
             code_text = input('>')
             text_write.write(f"\n`{code_text}`")
-            Markdown.menu(Markdown)
+
 
     def oredered_list_line(self):
         print("input numbers of lines")
@@ -145,7 +150,7 @@ class Markdown:
             Markdown.new_line(Markdown)
         elif entering_formatter == ('done'):
 
-
             pass
 
-Markdown.menu(Markdown)
+while True:
+    Markdown.menu(Markdown)
